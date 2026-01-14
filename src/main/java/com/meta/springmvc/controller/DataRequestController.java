@@ -24,4 +24,10 @@ public class DataRequestController {
         return String.format("Hello, @RequestParam으로 받은 값들,<br> name = %s age = %d", name, age );
 
     }
+
+    @PostMapping ("form/param")
+    @ResponseBody
+    public String helloRequestParamPost(@RequestParam String name, @RequestParam int age) {
+        return String.format("Hello, @RequestParam으로 받은 값들,<br> name = %s age = %d", name, age);
+    }
 }
